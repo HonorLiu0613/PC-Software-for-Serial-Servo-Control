@@ -1,0 +1,3833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>860</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>创建机器人配置</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>861</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QSlider" name="Slider_Servo1">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo1">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id1">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id2">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>1</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}
+border: none; </string>
+         </property>
+         <property name="text">
+          <string>ID:2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo2">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>33</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }
+border: none; </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo2">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>17</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_servo3">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo3">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id3">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:3</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_4">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id4">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:4</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo4">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo4">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_5">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id5">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:5</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo5">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo5">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_6">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id6">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:6</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo6">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo6">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QFrame" name="frame_7">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id7">
+         <property name="geometry">
+          <rect>
+           <x>2</x>
+           <y>4</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:7</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo7">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>18</x>
+           <y>38</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo7">
+         <property name="geometry">
+          <rect>
+           <x>2</x>
+           <y>21</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_8">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_servo8">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id8">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:8</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo8">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_9">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QSlider" name="Slider_Servo9">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo9">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id9">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:9</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_10">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_servo10">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id10">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:10</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo10">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_11">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id11">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:11</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo11">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo11">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_12">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id12">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:12</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo12">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo12">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QFrame" name="frame_19">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id13">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:13</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo13">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo13">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_20">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QSlider" name="Slider_Servo14">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo14">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id14">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:14</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_21">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id15">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:15</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo15">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo15">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_22">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id16">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:16</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo16">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo16">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_23">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_servo17">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id17">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:17</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo17">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_24">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QSlider" name="Slider_Servo18">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id18">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:18</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo18">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QFrame" name="frame_13">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_servo19">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo19">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id19">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:19</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_14">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QSlider" name="Slider_Servo20">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id20">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:20</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo20">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_15">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_id21">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo21">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo21">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_16">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QSlider" name="Slider_Servo22">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id22">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:22</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_servo22">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_17">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_servo23">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo23">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id23">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:23</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_18">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+  background: white; /* 背景改为白色 */
+  border: 2px solid #59969b; /* 使用与滑块一致的颜色 */
+  border-radius: 20px;
+}
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_servo24">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>36</y>
+           <width>106</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+        
+        QLineEdit:focus {
+            border-bottom: 1px solid #2a70f4;
+        }</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>在此输入舵机角度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Slider_Servo24">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>19</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider::groove:horizontal {
+    border: none;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    width: 12px; /* 增大滑块的宽度 */
+    margin: -1px 0px -1px -5px;
+    border-radius: 6px; /* 也可以调整圆角半径以匹配滑块的大小 */
+    background-color: white;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #59969b, stop:1 #04e7fa);
+    border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>240</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id24">
+         <property name="geometry">
+          <rect>
+           <x>1</x>
+           <y>2</y>
+           <width>139</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{border: none; /* 去掉控件的边框 */}
+QLabel{background: none; /* 去掉控件的边框 */}</string>
+         </property>
+         <property name="text">
+          <string>ID:24</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_create">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>370</y>
+     <width>185</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>21</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background: white;  /* 背景色为白色 */
+    border: 2px solid #59969b;  /* 设置边框颜色和宽度 */
+    border-radius: 20px;  /* 圆角边框 */ 
+}
+
+QPushButton:hover {
+    background: #f0f0f0;  /* 悬停时背景颜色变化 */
+    border-color: #4a7b87;  /* 悬停时边框颜色变化 */
+}
+
+QPushButton:pressed {
+    background: #e0e0e0;  /* 按下时背景颜色变化 */
+    border-color: #3e6c72;  /* 按下时边框颜色变化 */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>确认创建</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
