@@ -1,7 +1,8 @@
 # 串口舵机控制项目
 
 这是一个基于 Python 的串口通信控制舵机项目，主要通过图形界面操作舵机运动，适用于机器人动作编辑、自动化控制等场景。
-
+## 演示视频
+【基于PySide6的BUS舵机控制上位机演示视频】 https://www.bilibili.com/video/BV1YQSTBvEAJ/?share_source=copy_web&vd_source=ed252459302a17b4b11f3eeb7d925a3d
 ## 项目功能
 
 - **串口通信**：通过 `SerialManager` 类实现串口设备的自动检测、连接与数据发送。
